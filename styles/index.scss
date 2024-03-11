@@ -15,11 +15,12 @@ body{
         background-image: url("../images/landing-background.png");
         background-size: cover;
         height: 100lvh;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows:1fr 0.4fr 0.5fr 0.5fr 0.8fr;
     }
 }
 
 .landing{
+    z-index: -1;
     &__logo{
         grid-area: 2/2/3/3;
         place-self: center;
@@ -32,11 +33,18 @@ body{
         max-width: 40rem;
         width: 100%;
         height: 4rem;
-        padding: 0.1rem;
     }
     &__scroll{
         grid-area: 4/2/5/3;
         place-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        p{
+            margin: 0;
+            letter-spacing: 0.3rem;
+        }
     }
 }
 
@@ -49,22 +57,25 @@ body{
     &__input{
         grid-area: 1/1/2/2;
         text-align: center;
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.2rem;
         color: #999;
-        
     }
     &__button{
         grid-area: 1/2/2/3;
         font: fonts.$nav-font;
-        width: 8rem;
+        width: 9rem;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #5474FD;
         color: #fff;
+        border: #fff solid 2px;
 
+        span{
+            margin: 1rem;
+        }
         .fa-magnifying-glass{
-            color:red;
+            font-size: 20px;
         }
     }
 }
