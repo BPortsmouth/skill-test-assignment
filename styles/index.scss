@@ -64,6 +64,15 @@ h3{
             background-image: url("../images/travel-bg2.png");
         }
     }
+    &_contact{
+        background-image: url("../images/contact-bg.png");
+        grid-template-rows: 1fr 1fr 0.8fr;
+    }
+    &_footer{
+        grid-template-rows: 1fr 0.5fr 0.5fr;
+        min-height: 8rem;
+        height: 10rem;
+    }
 }
 
 .content{
@@ -120,9 +129,14 @@ h3{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+        color: #e8e8e8;
+        text-decoration: none;
         p{
             letter-spacing: 0.3rem;
             margin: 0.5rem;
+        }
+        &:hover{
+            text-decoration: underline;
         }
 
     }
@@ -180,11 +194,16 @@ h3{
             justify-content: space-between;
             height: 5rem;
         }
+        &_footer{
+            width: 100%;
+            justify-content: space-evenly;
+        }
     }
     &__item{
         display: flex;
         align-items: center;
         justify-content: center;
+
     }
     &__link {
         text-decoration: none;
@@ -195,6 +214,20 @@ h3{
         text-align: center;
         &:hover{
             background-color: #496BFE;
+        }
+        &_footer{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 5px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &_linkedin{
+            &:hover{
+                background-color: #e8e8e8;
+            }
         }
     }
 
@@ -292,6 +325,32 @@ h3{
     }
 }
 
+.contact{
+    &__header{
+        grid-area: 1/2/2/3;
+        place-self: center;
+    }
+    &__card{
+        background-color: rgba(#333 ,0.9) ;
+        height: fit-content;
+        grid-area: 2/2/3/3;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 2rem;
+        place-items: center;
+    }
+    &__content{
+        margin-left: 1rem;
+        letter-spacing: 0.05rem;
+        .fa-solid{
+            color: #5474FD;
+            font-size: 32px;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
 .button {
     width: 15rem;
     height: 4rem;
@@ -322,4 +381,22 @@ h3{
 
 @keyframes button-hover {
     100%{background-position: 0%;}
+}
+
+.footer{
+    &__logo{
+        grid-area: 2/2/3/3;
+        max-width: 12rem;
+        place-self: center;
+    }
+    &__navigation{
+        grid-area: 3/2/4/3;
+        max-width: 12rem;
+        width: 100%;
+        place-self: center;
+    }
+}
+
+.fa-linkedin-in{
+    color: #5474FD;
 }
