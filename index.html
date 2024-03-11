@@ -33,10 +33,10 @@
                     <li><a class="navigation-bar__link navigation-bar__logo" href="#landing-page"><img src="images/NavLogo.png" alt="Bhromaon Logo. The word 'Bhromaon' is in bold, white text in capital letters"></a></li>
                     <li>
                         <ul class="navigation-bar__container navigation-bar__container_inner">
-                            <li><a class="navigation-bar__link" href="#who-are-we">WHO ARE WE</a></li>
-                            <li><a class="navigation-bar__link" href="#">WHAT WE DO</a></li>
-                            <li><a class="navigation-bar__link" href="#">TRAVEL WITH US</a></li>
-                            <li><a class="navigation-bar__link" href="#">CONTACT US</a></li>
+                            <li class="navigation-bar__item"><a class="navigation-bar__link" href="#who-are-we">WHO ARE WE</a></li>
+                            <li class="navigation-bar__item"><a class="navigation-bar__link" href="#what-we-do">WHAT WE DO</a></li>
+                            <li class="navigation-bar__item"><a class="navigation-bar__link" href="#travel">TRAVEL WITH US</a></li>
+                            <li class="navigation-bar__item"><a class="navigation-bar__link" href="#">CONTACT US</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -56,8 +56,33 @@
                 </aside>
             </div>
         </section>
-        <section>
-            
+        <section class="container container_what" id="what-we-do">
+            <div class="content content_what">
+                <svg class="what-we-do__svg" width="800" height="200" viewbox="0 0 200 50" fill="none" xmlns="https://www.w3.org/2000/svg">
+                    <path d="M 0 50 C 20 20, 60 20, 80 50" stroke="white" stroke-width="1"/>
+                    <path d="M 120 50 C 140 20, 180 20, 200 50" stroke="white" stroke-width="1"/>
+                </svg>
+                <div class="what-we-do what-we-do__container">
+                    <div class="what-we-do what-we-do__content what-we-do__content_search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <h2>Search Places</h2>
+                    </div>
+                    <div class="what-we-do what-we-do__content what-we-do__content_select">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <h2>Select Places</h2>
+                    </div>
+                    <div class="what-we-do what-we-do__content what-we-do__content_enjoy">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <h2>Click & Enjoy</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container container_travel container_travel-top" id="travel">
+            <div class="content content_travel content_travel-top"></div>
+        </section>
+        <section class="container container_travel container_travel-bottom">
+            <div class="content content_travel content_travel-bottom"></div>
         </section>
     </main>
 </body>
