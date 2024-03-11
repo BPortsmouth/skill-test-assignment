@@ -29,7 +29,7 @@
     </header>
     <main>
         <header class="container container_navigation">
-            <nav class="navigation-bar">
+            <nav class="navigation-bar" id="nav-bar">
                 <ul class="navigation-bar__container navigation-bar__container_outer">
                     <li><a class="navigation-bar__link navigation-bar__logo" href="#landing-page"><img src="images/NavLogo.png" alt="Bhromaon Logo. The word 'Bhromaon' is in bold, white text in capital letters"></a></li>
                     <li>
@@ -42,7 +42,7 @@
                     </li>
                 </ul>
             </nav>
-            <a class="navigation-bar__link navigation-bar__burger-menu"><i class="fa-solid fa-bars-staggered"></i></a>
+            <a class="navigation-bar__link navigation-bar__burger-menu" onclick="burgerDrop()"><i class="fa-solid fa-bars-staggered"></i></a>
         </header>
         <section class="container container_who" id="who-are-we">
             <div class="content content_who">
@@ -126,4 +126,15 @@
         </footer>
     </main>
 </body>
+
+<script>
+    function burgerDrop() {
+        let burger = document.getElementById("nav-bar")
+        if (burger.className === "navigation-bar") {
+            burger.className += " responsive";
+        } else {
+            burger.className = "navigation-bar";
+        }
+    }
+</script>
 </html>
