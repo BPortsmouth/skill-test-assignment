@@ -2,7 +2,7 @@
 
 
 body{
-    width: 100lvw;
+    width: 100%;
     background-color: #232323;
     color: #fff ;
     font: fonts.$main-font;
@@ -11,11 +11,19 @@ body{
 .container{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+    width: 100%;
     &_landing{
         background-image: url("../images/landing-background.png");
         background-size: cover;
         height: 100lvh;
         grid-template-rows:1fr 0.4fr 0.5fr 0.5fr 0.8fr;
+    }
+    &__navigation{
+        grid-template-rows: 1fr;
+        background-color: #5474FD;
+        position: sticky;
+        top: 0;
+        z-index: 3;
     }
 }
 
@@ -59,6 +67,11 @@ body{
         text-align: center;
         letter-spacing: 0.2rem;
         color: #999;
+        &:focus{
+            background-color: #999;
+            color: #fff;
+            font-size: 22px;
+        }
     }
     &__button{
         grid-area: 1/2/2/3;
@@ -77,5 +90,39 @@ body{
         .fa-magnifying-glass{
             font-size: 20px;
         }
+
+        &:hover{
+            background-color: #0D39FD;
+        }
+    }
+}
+
+.navigation-bar{
+    grid-area: 1/2/2/3;
+    &__container{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        &_outer{
+            justify-content: space-between;
+            height: 5rem;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font: fonts.$nav-font;
+        padding: 1.5rem;
+        border-radius: 10px;
+        &:hover{
+            background-color: #0D39FD;
+            font-weight: 700;
+        }
+    }
+
+    &__logo{
+        display: block;
+        height: fit-content;
     }
 }
